@@ -1,0 +1,43 @@
+{
+    "name": "primitivesocial/ip-country",
+    "description": "Get's location information based on user's IP",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "ip country"
+    ],
+    "support": {
+        "docs": "https://github.com/PrimitiveSocial/ip-country/blob/master/README.md",
+        "issues": "https://github.com/PrimitiveSocial/ip-country/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Primitive Social",
+            "homepage": "primitivesocial.com"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "primitivesocial\\ipcountry\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "IP Country",
+        "handle": "ip-country",
+        "hasCpSettings": false,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/PrimitiveSocial/ip-country/master/CHANGELOG.md",
+        "components": {
+            "ipCountryService": "primitivesocial\\ipcountry\\services\\IpCountryService"
+        },
+        "class": "primitivesocial\\ipcountry\\IpCountry"
+    }
+}
