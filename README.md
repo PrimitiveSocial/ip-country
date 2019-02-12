@@ -24,15 +24,42 @@ To install the plugin, follow these instructions.
 
 ## IP Country Overview
 
--Insert text here-
+This get's the user's location data based on their IP address for use in Twig templates.
 
 ## Configuring IP Country
 
--Insert text here-
+No need! Comes ready to go out of the box.
+
+For testing locally, you will need to test at a remote server. Running this locally will return your IP address (127.0.0.1), which will not give any data.
+
+A simple way to get around this is to test via [Ngrok](https://ngrok.com/);
 
 ## Using IP Country
 
--Insert text here-
+```
+This sets the IP variable
+{% set ip = craft.ipcountry.get %}
+
+Then, you can check to see if the person is in North America
+{% if ip and ip.continent_code == 'NA' %}
+	<p>What up North America!</p>
+{% endif %}
+
+Check the city
+{% if ip and ip.city == 'Lubbock' %}
+	<p>Lubbock is the best</p>
+{% endif %}
+
+Check the state
+{% if ip and ip.state == 'Texas' %}
+	<p>Texas is awesome!</p>
+{% endif %}
+
+Check the country
+{% if ip and ip.country == 'Canada' %}
+	<p>Hooray for Canada!</p>
+{% endif %}
+```
 
 ## IP Country Roadmap
 
